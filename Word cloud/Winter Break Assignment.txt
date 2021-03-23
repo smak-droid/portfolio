@@ -1,0 +1,74 @@
+1. (HELLO WORLD)
+Hello World video demonstration submitted to Canvas & .c file uploaded
+
+2. (POINTER VS NON-POINTER VARIABLES)
+A pointer variable stores the address of another variable. Like we have seen, a pointer variable also has its own
+address, and obviously memory allocated to store its own address. A non pointer variable stores values such as those
+of type int, char, float, double, etc.
+
+3. (INTERPRETED VS COMPILED CODE)
+Interpreted code is used in a programming language such as MATLAB. This type of code is converted into machine-readable
+code while being run in real-time. Where as, compiled code is used in C. This means that the source code is prepared,taken,
+and turned into an executable version.
+Compiled code can be optimized and generally is expected to run faster, since it was precompiled in advance.
+
+4. (CONVERSIONS)
+0X1E is equivalent to 00011110 in binary/base-2 and 30 in decimal/base-10. 
+(E=14 and 1*16 + E = 30)
+
+0X32 is equivalent to 00110010 in binary/base-2 and 50 in decimal/base-10.
+(3*16 + 2 =50)
+
+0XFE is equivalent to 11111110 in binary/base-2 and 254 in decimal/base-10.
+(E=14, F=15 15*16 + 14 = 254)
+
+0XC4 is equivalent to 11000100 in binary/base-2 and 196 in decimal/base-10.
+(C=12 12*16 + 4= 196)
+
+6. Each byte contains 8 bits. A 16-bit address tells us that there are 2^16 possible addresses, each taking a byte.
+So, we have 8*2^16 bits.
+
+
+
+7. (ASCII)
+ch = 'k' ---> (107)_10 or 0X6B
+'5' ---> (53)_10 or 0X35
+'=' ---> (61)_10 or 0X3D
+'?' ---> (63)_10 or 0X3F
+
+8. (RANGES OF DATA TYPES)
+An unsigned char can take values 0 to 255.
+A short can take values -32768 to 32767 (-2^15 to 2^15 -1).
+A double can take values 1.2*10**(-38) to 3.4*10**38. This assumption is for the PIC32 where it uses 4 bytes, and not 8.
+
+10. (int vs unsigned int)
+An integer can take on postive and negative values where an unsigned integer is always positive. 
+THe range of values is smaller for int, than it is for unsigned int.Assumign an int takes 4 bytes,
+the respective ranges for an unsigned int is 0 to 2^32 -1 , while the "signed" takes values -2^31 to 2^31 -1.
+
+11. (INTEGER AND FLOATING POINT MATH)
+(A) if the integer values are within a smaller range, using char may be faster and uses less bytes/saves memory.
+whereas int allows a larger range of values.
+(B) A double allows us to maximize resolution while on the other hand, a float saves memory and is faster in calculations.
+(C)Char has a very limited range, but in that it will perform fast calculations as it saves memory relatively.
+A float will have a larger range of values, but to some degree, it may not be able to represent whole numbers exactly.
+
+16. 
+In our context, the unsigned long long int data type might be the closest. because it has the same number of bytes(8)
+and doesnt take on negative values. 
+A long double could have been on the same premise, however I assume that the address is represnted as whole numbers
+so the long long int is the beter option as it can represent integer values exactly.
+
+17. 
+ (A)all unknown
+ (B) kp now stores the address of i. Since we assume little endian representation, the lsb is stored in the pointer.
+ So now we only know that 0XB8 contains 0XB0, the rest are unknown.
+ (C)j stores the contents of kp now, which points to i.
+ So 0XB4...0XB7 contains whatever is at 0XB0...0XB3 and 0XB8 contains 0XB0, rest unknown. (equivalent to saying i=j)
+ (D)Now, 0XB0...0XB3 and 0XB4...0XB7 contain 0XAE, 0XB8 still stores 0XB0, rest unknown.
+ (E) 0XB0...0XB3 contain 0XAE, 0XB8 and 0XB9 store 0XB0, rest unknown.
+ (F)0XB0...0XB3 now stores 0X12. 0XB8 and 0Xb9 contain the address 0XB0, rest unknown.
+ (G)0XB0...0XB3 and 0XB4...0XB7 contain 0X12. 0XB8 and 0XB9 contain 0XB0.
+ 
+
+
